@@ -1,0 +1,21 @@
+{
+  "name": "makkani",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "watch:tailwind": "npx tailwindcss build public/styles/dev/tailwind.css -o public/styles/prod/tailwind.css",
+    "watch:custom": "sass public/styles/dev/custom.scss:public/styles/prod/custom.css --watch --no-source-map --style=compressed"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.2.3",
+    "moment": "^2.29.1",
+    "next": "10.0.5",
+    "postcss": "^8.2.4",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "tailwindcss": "^2.0.2"
+  }
+}
