@@ -12,12 +12,19 @@ const NinethMainSection = () => {
       />
       <div className="relative text-white flex flex-col flex-grow space-y-20">
         <FloatingBar text="احجز موعد" image="/images/icon_9.png" />
-        <form className="flex flex-col items-center justify-center w-full h-full bg-gray-100 bg-opacity-30 space-y-9">
+        <form className="flex flex-col items-center justify-center w-full h-full bg-gray-100 bg-opacity-30 space-y-9 py-9">
           <div className="flex flex-col text-gray-500 xl:flex-row w-full items-center justify-center space-y-9 xl:space-y-0 xl:space-x-9 xl:space-x-reverse">
             <div className="w-10/12 lg:w-8/12 xl:w-2/12">
               <input
                 type="text"
                 placeholder="ادخل اسمك"
+                className="p-3 w-full border-gray-500 rounded-lg"
+              />
+            </div>
+            <div className="w-10/12 lg:w-8/12 xl:w-2/12">
+              <input
+                type="tel"
+                placeholder="رقم هاتفك"
                 className="p-3 w-full border-gray-500 rounded-lg"
               />
             </div>
