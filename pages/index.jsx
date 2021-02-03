@@ -23,8 +23,8 @@ export default function Home({ pricingData, teamMembersData }) {
       <FifthMainSection />
       <SixthMainSection />
       <SeventhMainSection />
-      <EighthMainSection />
-      <TenthMainSection />
+      <EighthMainSection pricingData={pricingData} />
+      <TenthMainSection teamMembersData={teamMembersData} />
       <NinethMainSection />
       <Footer />
     </main>
