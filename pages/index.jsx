@@ -10,8 +10,10 @@ import SeventhMainSection from "../components/MainSections/SeventhMainSection";
 import SixthMainSection from "../components/MainSections/SixthMainSection";
 import TenthMainSection from "../components/MainSections/TenthMainSection";
 import ThirdMainSection from "../components/MainSections/ThirdMainSection";
+import { API } from "../helper/CONST";
+import Axios from "axios";
 
-export default function Home() {
+export default function Home({ pricingData, teamMembersData }) {
   return (
     <main className="w-screen h-screen overflow-hidden overflow-y-auto">
       <FirstMainSection />
@@ -28,3 +30,21 @@ export default function Home() {
     </main>
   );
 }
+export const getServerSideProps = async ({ res }) => {
+  const pricingData = await Axios({
+    baseURL: API,
+    url: "/api/pricing",
+    method: "GET",
+  });
+  const teamMembersData = await Axios({
+    baseURL: API,
+    url: "/api/team-member",
+    method: "GET",
+  });
+  return {
+    props: {
+      pricingData: pricingData.data,
+      teamMembersData: teamMembersData.data,
+    },
+  };
+};
