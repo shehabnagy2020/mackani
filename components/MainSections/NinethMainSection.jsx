@@ -31,7 +31,7 @@ const NinethMainSection = () => {
     try {
       const res = await Axios({
         baseURL: API,
-        url: "/api/reservation",
+        url: "/api/reservation/add",
         method: "POST",
         data: convertToFormData(info),
       });
@@ -46,10 +46,18 @@ const NinethMainSection = () => {
     }
   };
 
+  const handleDate = (value) => {
+    console.log(value);
+    setInfo({
+      ...info,
+      date: value,
+    });
+  };
+
   const handleTime = (value) => {
     setInfo({
       ...info,
-      time: `${value}:00:00`,
+      time: value,
     });
   };
 
@@ -122,7 +130,7 @@ const NinethMainSection = () => {
                   ))}
                 </select>
                 <input
-                  onChange={(e) => handleChange("date", e.target.value)}
+                  onChange={(e) => handleDate(e.target.value)}
                   type="date"
                   placeholder="ادخل الميعاد"
                   className="flex-grow"
