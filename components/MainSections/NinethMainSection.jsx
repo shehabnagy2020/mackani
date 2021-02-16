@@ -23,8 +23,13 @@ const NinethMainSection = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log(info.phone);
     if (!info.name || !info.phone || !info.date) {
       alert("برجاء ملئ جميع البيانات");
+      return;
+    }
+    if (info.phone.length !== 9) {
+      alert("برجاء ادخال رقم هاتف صحيح");
       return;
     }
     setLoader(true);
@@ -97,13 +102,15 @@ const NinethMainSection = () => {
                 className="p-3 w-full border-gray-500 rounded-lg"
               />
             </div>
-            <div className="w-10/12 lg:w-8/12 xl:w-2/12">
+            <div className="w-10/12 lg:w-8/12 xl:w-2/12 flex items-center p-3 border-gray-500 rounded-lg bg-white outline-none space-x-2 space-x-reverse">
               <input
                 onChange={(e) => handleChange("phone", e.target.value)}
-                type="tel"
+                type="number"
                 placeholder="رقم هاتفك"
-                className="p-3 w-full border-gray-500 rounded-lg"
+                className=" w-full "
+                minLength="10"
               />
+              <span className="">+966</span>
             </div>
             <div className="w-10/12 lg:w-8/12 xl:w-2/12">
               <select
