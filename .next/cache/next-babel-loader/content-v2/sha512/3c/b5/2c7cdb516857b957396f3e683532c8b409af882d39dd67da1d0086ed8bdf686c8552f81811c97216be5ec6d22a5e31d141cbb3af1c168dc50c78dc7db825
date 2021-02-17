@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { API } from \"./CONST\";\n\nvar removePublic = function removePublic(path) {\n  var finalPath = API;\n  path = path.replace(\"public\", \"\");\n  finalPath += path;\n  return finalPath;\n};\n\nexport default removePublic;","map":null,"metadata":{},"sourceType":"module"}
