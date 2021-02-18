@@ -132,7 +132,17 @@ const NinethMainSection = () => {
                   onChange={(e) => handleTime(e.target.value)}
                 >
                   <option value="">الساعه</option>
-                  {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((i) => (
+                  {[
+                    "10 Am",
+                    "11 Am",
+                    "12 Pm",
+                    "1 Pm",
+                    "2 Pm",
+                    "3 Pm",
+                    "4 Pm",
+                    "5 Pm",
+                    "6 Pm",
+                  ].map((i) => (
                     <option value={i}>{i}</option>
                   ))}
                 </select>
