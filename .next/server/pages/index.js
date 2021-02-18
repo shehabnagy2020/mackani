@@ -233,6 +233,7 @@ const ImageWithLayers = ({
 
 /* harmony default export */ var components_ImageWithLayers = (ImageWithLayers);
 // CONCATENATED MODULE: ./helper/CONST.js
+// export const API = "http://localhost:3000";
 const API = "http://cpanel.mackani.com";
 // CONCATENATED MODULE: ./helper/removePublic.js
 
@@ -272,6 +273,7 @@ const PricingItem = ({
         children: /*#__PURE__*/Object(jsx_runtime_["jsxs"])("span", {
           className: "capitalize text-white text-4xl font-bold",
           children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("sup", {
+            className: "text-xl",
             children: "$"
           }), item.price]
         })
