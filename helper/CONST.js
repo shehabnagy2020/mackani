@@ -1,1 +1,1 @@
-export const API = "http://localhost:30000";
+export const API = "http://cpanel.mackani.com";

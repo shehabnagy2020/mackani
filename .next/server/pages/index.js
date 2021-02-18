@@ -233,7 +233,7 @@ const ImageWithLayers = ({
 
 /* harmony default export */ var components_ImageWithLayers = (ImageWithLayers);
 // CONCATENATED MODULE: ./helper/CONST.js
-const API = "http://localhost:30000";
+const API = "http://cpanel.mackani.com";
 // CONCATENATED MODULE: ./helper/removePublic.js
 
 
