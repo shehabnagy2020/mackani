@@ -257,11 +257,11 @@ const PricingItem = ({
 }) => {
   return /*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
     className: "flex flex-col rounded-lg relative w-7/12 md:w-4/12 lg:w-3/12 xl:w-60 shadow-lg",
-    style: {
-      height: "400px"
-    },
     children: [/*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
-      className: "h-2/4 rounded-lg relative",
+      className: "rounded-lg relative",
+      style: {
+        height: "250px"
+      },
       children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("img", {
         src: helper_removePublic(item.image),
         alt: "",
@@ -277,9 +277,16 @@ const PricingItem = ({
             children: "$"
           }), item.price]
         })
+      }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
+        className: "absolute rounded-lg p-3 abs-center-x text-sm z-10",
+        style: {
+          backgroundColor: item.title_color,
+          bottom: "-10%"
+        },
+        children: item.title
       })]
     }), /*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
-      className: "h-2/4 flex flex-col justify-center space-y-2 items-center bg-black rounded-b-lg",
+      className: "flex flex-col justify-center space-y-2 items-center bg-black rounded-b-lg relative p-4 pt-10",
       children: [item.text_1 && /*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
         className: "text-white capitalize",
         children: item.text_1
@@ -292,13 +299,22 @@ const PricingItem = ({
       }), item.text_4 && /*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
         className: "text-white capitalize",
         children: item.text_4
+      }), item.text_5 && /*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
+        className: "text-white capitalize",
+        children: item.text_5
+      }), item.text_6 && /*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
+        className: "text-white capitalize",
+        children: item.text_6
+      }), item.text_7 && /*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
+        className: "text-white capitalize",
+        children: item.text_7
+      }), item.text_8 && /*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
+        className: "text-white capitalize",
+        children: item.text_8
+      }), item.text_9 && /*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
+        className: "text-white capitalize",
+        children: item.text_9
       })]
-    }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
-      className: "absolute rounded-lg p-3 abs-center text-sm",
-      style: {
-        backgroundColor: item.title_color
-      },
-      children: item.title
     })]
   });
 };
@@ -326,7 +342,7 @@ const EighthMainSection = ({
         text: "\u0628\u0627\u0642\u0627\u062A \u0645\u062A\u0645\u064A\u0632\u0647",
         image: "/images/icon_8.png"
       }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
-        className: "flex flex-col xl:flex-row items-center justify-center w-full h-full bg-gray-100 bg-opacity-30 space-y-9 xl:space-y-0 xl:space-x-9 xl:space-x-reverse py-7",
+        className: "flex flex-col xl:flex-row items-center xl:items-start justify-center w-full h-full bg-gray-100 bg-opacity-30 space-y-9 xl:space-y-0 xl:space-x-9 xl:space-x-reverse py-7",
         children: pricingData && pricingData.map((item, i) => /*#__PURE__*/Object(jsx_runtime_["jsx"])(components_PricingItem, {
           item: item
         }, i))

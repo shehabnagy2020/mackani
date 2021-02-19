@@ -3,11 +3,8 @@ import removePublic from "../../helper/removePublic";
 
 const PricingItem = ({ item }) => {
   return (
-    <div
-      className="flex flex-col rounded-lg relative w-7/12 md:w-4/12 lg:w-3/12 xl:w-60 shadow-lg"
-      style={{ height: "400px" }}
-    >
-      <div className="h-2/4 rounded-lg relative">
+    <div className="flex flex-col rounded-lg relative w-7/12 md:w-4/12 lg:w-3/12 xl:w-60 shadow-lg">
+      <div className="rounded-lg relative" style={{ height: "250px" }}>
         <img
           src={removePublic(item.image)}
           alt=""
@@ -20,8 +17,14 @@ const PricingItem = ({ item }) => {
             {item.price}
           </span>
         </div>
+        <div
+          className="absolute rounded-lg p-3 abs-center-x text-sm z-10"
+          style={{ backgroundColor: item.title_color, bottom: "-10%" }}
+        >
+          {item.title}
+        </div>
       </div>
-      <div className="h-2/4 flex flex-col justify-center space-y-2 items-center bg-black rounded-b-lg">
+      <div className="flex flex-col justify-center space-y-2 items-center bg-black rounded-b-lg relative p-4 pt-10">
         {item.text_1 && (
           <div className="text-white capitalize">{item.text_1}</div>
         )}
@@ -34,12 +37,21 @@ const PricingItem = ({ item }) => {
         {item.text_4 && (
           <div className="text-white capitalize">{item.text_4}</div>
         )}
-      </div>
-      <div
-        className="absolute rounded-lg p-3 abs-center text-sm"
-        style={{ backgroundColor: item.title_color }}
-      >
-        {item.title}
+        {item.text_5 && (
+          <div className="text-white capitalize">{item.text_5}</div>
+        )}
+        {item.text_6 && (
+          <div className="text-white capitalize">{item.text_6}</div>
+        )}
+        {item.text_7 && (
+          <div className="text-white capitalize">{item.text_7}</div>
+        )}
+        {item.text_8 && (
+          <div className="text-white capitalize">{item.text_8}</div>
+        )}
+        {item.text_9 && (
+          <div className="text-white capitalize">{item.text_9}</div>
+        )}
       </div>
     </div>
   );
