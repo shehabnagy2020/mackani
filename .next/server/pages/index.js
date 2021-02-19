@@ -252,6 +252,7 @@ const removePublic = path => {
 
 
 
+
 const PricingItem = ({
   item
 }) => {
@@ -266,17 +267,19 @@ const PricingItem = ({
         src: helper_removePublic(item.image),
         alt: "",
         className: "absolute w-full h-full top-0 left-0"
-      }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
-        className: "bg-black bg-opacity-75 absolute w-full h-full top-0 left-0"
-      }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
-        className: "relative flex justify-center items-center h-full",
-        children: /*#__PURE__*/Object(jsx_runtime_["jsxs"])("span", {
-          className: "capitalize text-white text-4xl font-bold",
-          children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("sup", {
-            className: "text-xl",
-            children: "$"
-          }), item.price]
-        })
+      }), item && item.price && item.price != 0 && /*#__PURE__*/Object(jsx_runtime_["jsxs"])(jsx_runtime_["Fragment"], {
+        children: [" ", /*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
+          className: "bg-black bg-opacity-75 absolute w-full h-full top-0 left-0"
+        }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
+          className: "relative flex justify-center items-center h-full",
+          children: /*#__PURE__*/Object(jsx_runtime_["jsxs"])("span", {
+            className: "capitalize text-white text-4xl font-bold",
+            children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("sup", {
+              className: "text-xl",
+              children: "$"
+            }), item.price]
+          })
+        })]
       }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
         className: "absolute rounded-lg p-3 abs-center-x text-sm z-10",
         style: {
@@ -706,7 +709,7 @@ const NinethMainSection = () => {
                 children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("option", {
                   value: "",
                   children: "\u0627\u0644\u0633\u0627\u0639\u0647"
-                }), ["10 Am", "11 Am", "12 Pm", "1 Pm", "2 Pm", "3 Pm", "4 Pm", "5 Pm", "6 Pm"].map(i => /*#__PURE__*/Object(jsx_runtime_["jsx"])("option", {
+                }), ["9 Am", "10 Am", "11 Am", "12 Pm", "1 Pm", "2 Pm", "3 Pm", "4 Pm", "5 Pm", "6 Pm", "7 Pm", "8 Pm", "9 Pm", "10 Pm", "11 Pm"].map(i => /*#__PURE__*/Object(jsx_runtime_["jsx"])("option", {
                   value: i,
                   children: i
                 }))]

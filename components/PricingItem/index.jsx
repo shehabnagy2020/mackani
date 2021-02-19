@@ -10,13 +10,18 @@ const PricingItem = ({ item }) => {
           alt=""
           className="absolute w-full h-full top-0 left-0"
         />
-        <div className="bg-black bg-opacity-75 absolute w-full h-full top-0 left-0" />
-        <div className="relative flex justify-center items-center h-full">
-          <span className="capitalize text-white text-4xl font-bold">
-            <sup className="text-xl">$</sup>
-            {item.price}
-          </span>
-        </div>
+        {item && item.price && item.price != 0 && (
+          <>
+            {" "}
+            <div className="bg-black bg-opacity-75 absolute w-full h-full top-0 left-0" />
+            <div className="relative flex justify-center items-center h-full">
+              <span className="capitalize text-white text-4xl font-bold">
+                <sup className="text-xl">$</sup>
+                {item.price}
+              </span>
+            </div>
+          </>
+        )}
         <div
           className="absolute rounded-lg p-3 abs-center-x text-sm z-10"
           style={{ backgroundColor: item.title_color, bottom: "-10%" }}
