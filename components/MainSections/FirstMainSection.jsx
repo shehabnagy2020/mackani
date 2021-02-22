@@ -6,7 +6,7 @@ const FirstMainSection = () => {
     <div className="w-full h-full relative flex items-center">
       <ImageWithLayers
         image="/images/image_1.png"
-        layers={["bg-black bg-opacity-90", "bg-black bg-opacity-70"]}
+        layers={["bg-black bg-opacity-90", "bg-black bg-opacity-20"]}
       />
       <div className="relative w-full text-white flex flex-col items-center space-y-28 px-5">
         <span className="text-lg md:text-xl lg:text-2xl font-semibold">

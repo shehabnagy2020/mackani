@@ -454,7 +454,7 @@ const FirstMainSection = () => {
     className: "w-full h-full relative flex items-center",
     children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])(components_ImageWithLayers, {
       image: "/images/image_1.png",
-      layers: ["bg-black bg-opacity-90", "bg-black bg-opacity-70"]
+      layers: ["bg-black bg-opacity-90", "bg-black bg-opacity-20"]
     }), /*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
       className: "relative w-full text-white flex flex-col items-center space-y-28 px-5",
       children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("span", {
@@ -627,26 +627,38 @@ const NinethMainSection = () => {
 
   const types = [{
     id: 1,
+    name: "الباقه الفضيه",
+    value: "الباقه الفضيه"
+  }, {
+    id: 2,
+    name: "الباقه الذهبيه",
+    value: "الباقه الذهبيه"
+  }, {
+    id: 3,
+    name: "الباقه البرونزيه",
+    value: "الباقه البرونزيه"
+  }, {
+    id: 4,
     name: "قص الشعر",
     value: "قص الشعر"
   }, {
-    id: 2,
+    id: 5,
     name: "حلاقة الذقن",
     value: "حلاقة الذقن"
   }, {
-    id: 3,
+    id: 6,
     name: "الصبغات",
     value: "الصبغات"
   }, {
-    id: 4,
+    id: 7,
     name: "معالجات الشعر",
     value: "معالجات الشعر"
   }, {
-    id: 5,
+    id: 8,
     name: "تدليك الوجه",
     value: "تدليك الوجه"
   }, {
-    id: 6,
+    id: 9,
     name: "العنايه باليدين والقدمين",
     value: "العنايه باليدين والقدمين"
   }];
@@ -793,7 +805,7 @@ const SecondMainSection = () => {
     className: "w-full min-h-full relative py-36",
     children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])(components_ImageWithLayers, {
       image: "/images/image_1.png",
-      layers: ["bg-blue-500 bg-opacity-50", "bg-black bg-opacity-90"]
+      layers: ["bg-blue-500 bg-opacity-50", "bg-black bg-opacity-70"]
     }), /*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
       className: "relative text-white flex flex-col w-full space-y-20",
       children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])(components_FloatingBar, {

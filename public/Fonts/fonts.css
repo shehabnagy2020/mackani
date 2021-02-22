@@ -2,17 +2,17 @@
   font-family: "Cairo";
   font-style: normal;
   font-weight: 500;
-  src: url("/fonts/Cairo-Regular.ttf"); /* IE9 Compat Modes */
+  src: url("/fonts/AdobeArabic-Regular.otf"); /* IE9 Compat Modes */
 }
 @font-face {
   font-family: "Cairo";
   font-style: normal;
   font-weight: 600;
-  src: url("/fonts/Cairo-SemiBold.ttf"); /* IE9 Compat Modes */
+  src: url("/fonts/29LT Bukra-Medium.OTF"); /* IE9 Compat Modes */
 }
 @font-face {
   font-family: "Cairo";
   font-style: normal;
   font-weight: 700;
-  src: url("/fonts/Cairo-Bold.ttf"); /* IE9 Compat Modes */
+  src: url("/fonts/29LT Bukra-Medium.OTF"); /* IE9 Compat Modes */
 }

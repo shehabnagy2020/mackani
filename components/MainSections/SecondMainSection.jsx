@@ -17,7 +17,7 @@ const SecondMainSection = () => {
     <div className="w-full min-h-full relative py-36">
       <ImageWithLayers
         image="/images/image_1.png"
-        layers={["bg-blue-500 bg-opacity-50", "bg-black bg-opacity-90"]}
+        layers={["bg-blue-500 bg-opacity-50", "bg-black bg-opacity-70"]}
       />
       <div className="relative text-white flex flex-col w-full space-y-20">
         <FloatingBar text="الخدمات" image="/images/icon_1.png" />
