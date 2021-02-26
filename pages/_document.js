@@ -42,7 +42,7 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/icon?family=Material+Icons"
             rel="stylesheet"
           ></link>
-          <link rel="stylesheet" href="/fonts/fonts.css" />
+          <link rel="stylesheet" href="/fonts copy/fonts.css" />
           <link rel="stylesheet" href="/styles/prod/tailwind.css" />
           <link rel="stylesheet" href="/styles/prod/custom.css" />
         </Head>

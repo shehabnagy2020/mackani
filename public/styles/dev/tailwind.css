@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 @layer utilities {
-  @variants hover {
+  @variants hover, responsive {
     .abs-center-x {
       left: 50%;
       transform: translateX(-50%);

@@ -169,7 +169,7 @@ class MyDocument extends next_document__WEBPACK_IMPORTED_MODULE_1___default.a {
           rel: "stylesheet"
         }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("link", {
           rel: "stylesheet",
-          href: "/fonts/fonts.css"
+          href: "/fonts copy/fonts.css"
         }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("link", {
           rel: "stylesheet",
           href: "/styles/prod/tailwind.css"

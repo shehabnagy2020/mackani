@@ -214,7 +214,8 @@ const FloatingBar = ({
 
 const ImageWithLayers = ({
   image,
-  layers
+  layers,
+  children
 }) => {
   return /*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
     className: "absolute w-full h-full top-0 left-0",
@@ -224,7 +225,7 @@ const ImageWithLayers = ({
         src: image,
         alt: "",
         className: "absolute w-full h-full object-cover  top-0 left-0"
-      }), layers.map((item, i) => /*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
+      }), children, layers.map((item, i) => /*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
         className: `absolute w-full h-full top-0 left-0 ${item}`
       }, i))]
     })
@@ -452,9 +453,14 @@ const FifthMainSection = () => {
 const FirstMainSection = () => {
   return /*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
     className: "w-full h-full relative flex items-center",
-    children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])(components_ImageWithLayers, {
-      image: "/images/image_1.png",
-      layers: ["bg-black bg-opacity-90", "bg-black bg-opacity-20"]
+    children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])(components_ImageWithLayers // image="/images/image_1.png"
+    , {
+      layers: ["bg-black bg-opacity-90", "bg-black bg-opacity-20"],
+      children: /*#__PURE__*/Object(jsx_runtime_["jsx"])("img", {
+        src: "/images/man.png",
+        alt: "",
+        className: "absolute right-0 top-0 h-auto md:abs-center-y md:h-3/4 "
+      })
     }), /*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
       className: "relative w-full text-white flex flex-col items-center space-y-28 px-5",
       children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("span", {

@@ -1,6 +1,6 @@
 import React from "react";
 
-const ImageWithLayers = ({ image, layers }) => {
+const ImageWithLayers = ({ image, layers, children }) => {
   return (
     <div className="absolute w-full h-full top-0 left-0">
       <div className="w-full h-full relative">
@@ -9,6 +9,7 @@ const ImageWithLayers = ({ image, layers }) => {
           alt=""
           className="absolute w-full h-full object-cover  top-0 left-0"
         />
+        {children}
         {layers.map((item, i) => (
           <div
             key={i}
