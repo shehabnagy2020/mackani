@@ -23,7 +23,7 @@ const SecondMainSection = () => {
         <FloatingBar text="الخدمات" image="/images/icon_1.png" />
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 mx-auto w-4/6">
           {services.map((item) => (
-            <ServiceItem ket={item.id} item={item} />
+            <ServiceItem key={item.id} item={item} />
           ))}
         </div>
       </div>

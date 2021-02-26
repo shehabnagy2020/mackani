@@ -1,18 +1,18 @@
 @font-face {
-  font-family: "Cairo";
+  font-family: "Changa";
   font-style: normal;
   font-weight: 500;
-  src: url("/fonts/AdobeArabic-Regular.otf"); /* IE9 Compat Modes */
+  src: url("/fonts/Changa-Medium.ttf"); /* IE9 Compat Modes */
 }
 @font-face {
-  font-family: "Cairo";
+  font-family: "Changa";
   font-style: normal;
   font-weight: 600;
-  src: url("/fonts/29LT Bukra-Medium.OTF"); /* IE9 Compat Modes */
+  src: url("/fonts/Changa-SemiBold.ttf"); /* IE9 Compat Modes */
 }
 @font-face {
-  font-family: "Cairo";
+  font-family: "Changa";
   font-style: normal;
   font-weight: 700;
-  src: url("/fonts/29LT Bukra-Medium.OTF"); /* IE9 Compat Modes */
+  src: url("/fonts/Changa-Bold.ttf"); /* IE9 Compat Modes */
 }

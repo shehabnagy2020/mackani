@@ -570,6 +570,7 @@ const NinethMainSection = () => {
     1: setInfo
   } = Object(external_react_["useState"])({
     name: "",
+    code: "+966",
     phone: "",
     type: "قص الشعر",
     date: "",
@@ -598,8 +599,15 @@ const NinethMainSection = () => {
     if (info.phone.length !== 9) {
       alert("برجاء ادخال رقم هاتف صحيح");
       return;
-    }
+    } // let newPhone = "+966" + info.phone;
+    // setInfo({ ...info, phone: newPhone });
 
+
+    let newInfo = _objectSpread(_objectSpread({}, info), {}, {
+      phone: info.code + info.phone
+    });
+
+    console.log(newInfo);
     setLoader(true);
 
     try {
@@ -607,7 +615,7 @@ const NinethMainSection = () => {
         baseURL: API,
         url: "/api/reservation/add",
         method: "POST",
-        data: helper_convertToFormData(info)
+        data: helper_convertToFormData(newInfo)
       });
       setLoader(false);
       alert("لقد تم حجز الموعد");
@@ -668,7 +676,6 @@ const NinethMainSection = () => {
     name: "العنايه باليدين والقدمين",
     value: "العنايه باليدين والقدمين"
   }];
-  console.log(info);
   return /*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
     className: "w-screen min-h-screen flex relative py-32",
     children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])(components_ImageWithLayers, {
@@ -702,7 +709,7 @@ const NinethMainSection = () => {
               minLength: "10"
             }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("span", {
               className: "",
-              children: "+966"
+              children: "966+"
             })]
           }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
             className: "w-10/12 lg:w-8/12 xl:w-2/12",
@@ -730,7 +737,7 @@ const NinethMainSection = () => {
                 }), ["9 Am", "10 Am", "11 Am", "12 Pm", "1 Pm", "2 Pm", "3 Pm", "4 Pm", "5 Pm", "6 Pm", "7 Pm", "8 Pm", "9 Pm", "10 Pm", "11 Pm"].map(i => /*#__PURE__*/Object(jsx_runtime_["jsx"])("option", {
                   value: i,
                   children: i
-                }))]
+                }, i))]
               }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("input", {
                 onChange: e => handleDate(e.target.value),
                 type: "date",
@@ -820,9 +827,8 @@ const SecondMainSection = () => {
       }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
         className: "grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 mx-auto w-4/6",
         children: services.map(item => /*#__PURE__*/Object(jsx_runtime_["jsx"])(components_ServiceItem, {
-          ket: item.id,
           item: item
-        }))
+        }, item.id))
       })]
     })]
   });

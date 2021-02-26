@@ -9,6 +9,7 @@ import convertToFormData from "../../helper/convertToFormData";
 const NinethMainSection = () => {
   const [info, setInfo] = useState({
     name: "",
+    code: "+966",
     phone: "",
     type: "قص الشعر",
     date: "",
@@ -32,13 +33,17 @@ const NinethMainSection = () => {
       alert("برجاء ادخال رقم هاتف صحيح");
       return;
     }
+    // let newPhone = "+966" + info.phone;
+    // setInfo({ ...info, phone: newPhone });
+    let newInfo = { ...info, phone: info.code + info.phone };
+    console.log(newInfo);
     setLoader(true);
     try {
       const res = await Axios({
         baseURL: API,
         url: "/api/reservation/add",
         method: "POST",
-        data: convertToFormData(info),
+        data: convertToFormData(newInfo),
       });
       setLoader(false);
       alert("لقد تم حجز الموعد");
@@ -82,8 +87,6 @@ const NinethMainSection = () => {
     },
   ];
 
-  console.log(info);
-
   return (
     <div className="w-screen min-h-screen flex relative py-32">
       <ImageWithLayers
@@ -113,7 +116,7 @@ const NinethMainSection = () => {
                 className=" w-full "
                 minLength="10"
               />
-              <span className="">+966</span>
+              <span className="">966+</span>
             </div>
             <div className="w-10/12 lg:w-8/12 xl:w-2/12">
               <select
@@ -152,7 +155,9 @@ const NinethMainSection = () => {
                     "10 Pm",
                     "11 Pm",
                   ].map((i) => (
-                    <option value={i}>{i}</option>
+                    <option key={i} value={i}>
+                      {i}
+                    </option>
                   ))}
                 </select>
                 <input
