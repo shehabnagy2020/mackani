@@ -234,8 +234,73 @@ const ImageWithLayers = ({
 
 /* harmony default export */ var components_ImageWithLayers = (ImageWithLayers);
 // CONCATENATED MODULE: ./helper/CONST.js
-// export const API = "http://localhost:3000";
+// export const API = "http://localhost:2333";
 const API = "https://cpanel.mackani.com";
+const RESERVATIONS = [{
+  id: 1,
+  value: "الباقه الفضيه",
+  price: "150 SR"
+}, {
+  id: 2,
+  value: "الباقه الذهبيه",
+  price: "250 SR"
+}, {
+  id: 3,
+  value: "الباقه الماسيه",
+  price: "400 SR"
+}, {
+  id: 4,
+  value: "حلاقة الشعر",
+  price: "35 SR"
+}, {
+  id: 5,
+  value: "حلاقة الذقن",
+  price: "25 SR"
+}, {
+  id: 6,
+  value: "استشوار مع غسيل شعر",
+  price: "50 SR"
+}, {
+  id: 7,
+  value: "انواع الماسك",
+  price: "50 SR"
+}, {
+  id: 8,
+  value: "شمع",
+  price: "50 SR"
+}, {
+  id: 9,
+  value: "حمام زيت شعر",
+  price: "120 SR"
+}, {
+  id: 10,
+  value: "صبغة شعر",
+  price: "120 SR"
+}, {
+  id: 11,
+  value: "صبغة دقن",
+  price: "60 SR"
+}, {
+  id: 12,
+  value: "كراتين",
+  price: "300 SR"
+}, {
+  id: 13,
+  value: "حناء شعر",
+  price: "100 SR"
+}, {
+  id: 14,
+  value: "تنظيف بشره",
+  price: "250 SR"
+}, {
+  id: 15,
+  value: "تجهيز عرسان",
+  price: "800 SR"
+}, {
+  id: 16,
+  value: "منكير بدكير",
+  price: "150 SR"
+}];
 // CONCATENATED MODULE: ./helper/removePublic.js
 
 
@@ -277,7 +342,7 @@ const PricingItem = ({
             className: "capitalize text-white text-4xl font-bold",
             children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("sup", {
               className: "text-xl",
-              children: "$"
+              children: "SR"
             }), item.price]
           })
         })]
@@ -639,43 +704,6 @@ const NinethMainSection = () => {
     }));
   };
 
-  const types = [{
-    id: 1,
-    name: "الباقه الفضيه",
-    value: "الباقه الفضيه"
-  }, {
-    id: 2,
-    name: "الباقه الذهبيه",
-    value: "الباقه الذهبيه"
-  }, {
-    id: 3,
-    name: "الباقه البرونزيه",
-    value: "الباقه البرونزيه"
-  }, {
-    id: 4,
-    name: "قص الشعر",
-    value: "قص الشعر"
-  }, {
-    id: 5,
-    name: "حلاقة الذقن",
-    value: "حلاقة الذقن"
-  }, {
-    id: 6,
-    name: "الصبغات",
-    value: "الصبغات"
-  }, {
-    id: 7,
-    name: "معالجات الشعر",
-    value: "معالجات الشعر"
-  }, {
-    id: 8,
-    name: "تدليك الوجه",
-    value: "تدليك الوجه"
-  }, {
-    id: 9,
-    name: "العنايه باليدين والقدمين",
-    value: "العنايه باليدين والقدمين"
-  }];
   return /*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
     className: "w-screen min-h-screen flex relative py-32",
     children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])(components_ImageWithLayers, {
@@ -719,9 +747,9 @@ const NinethMainSection = () => {
               children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("option", {
                 value: "",
                 children: "\u0646\u0648\u0639 \u0627\u0644\u062E\u062F\u0645\u0647"
-              }), types.map(item => /*#__PURE__*/Object(jsx_runtime_["jsx"])("option", {
+              }), RESERVATIONS.map(item => /*#__PURE__*/Object(jsx_runtime_["jsxs"])("option", {
                 value: item.value,
-                children: item.name
+                children: [item.value, " - ", item.price]
               }, item.id))]
             })
           }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {

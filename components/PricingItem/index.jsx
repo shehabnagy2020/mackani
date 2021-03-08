@@ -16,7 +16,7 @@ const PricingItem = ({ item }) => {
             <div className="bg-black bg-opacity-75 absolute w-full h-full top-0 left-0" />
             <div className="relative flex justify-center items-center h-full">
               <span className="capitalize text-white text-4xl font-bold">
-                <sup className="text-xl">$</sup>
+                <sup className="text-xl">SR</sup>
                 {item.price}
               </span>
             </div>

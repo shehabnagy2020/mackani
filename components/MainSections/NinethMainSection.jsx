@@ -3,7 +3,7 @@ import FloatingBar from "../FloatingBar";
 import ImageWithLayers from "../ImageWithLayers";
 import Axios from "axios";
 import moment from "moment";
-import { API } from "../../helper/CONST";
+import { API, RESERVATIONS } from "../../helper/CONST";
 import convertToFormData from "../../helper/convertToFormData";
 
 const NinethMainSection = () => {
@@ -71,22 +71,6 @@ const NinethMainSection = () => {
     });
   };
 
-  const types = [
-    { id: 1, name: "الباقه الفضيه", value: "الباقه الفضيه" },
-    { id: 2, name: "الباقه الذهبيه", value: "الباقه الذهبيه" },
-    { id: 3, name: "الباقه البرونزيه", value: "الباقه البرونزيه" },
-    { id: 4, name: "قص الشعر", value: "قص الشعر" },
-    { id: 5, name: "حلاقة الذقن", value: "حلاقة الذقن" },
-    { id: 6, name: "الصبغات", value: "الصبغات" },
-    { id: 7, name: "معالجات الشعر", value: "معالجات الشعر" },
-    { id: 8, name: "تدليك الوجه", value: "تدليك الوجه" },
-    {
-      id: 9,
-      name: "العنايه باليدين والقدمين",
-      value: "العنايه باليدين والقدمين",
-    },
-  ];
-
   return (
     <div className="w-screen min-h-screen flex relative py-32">
       <ImageWithLayers
@@ -124,9 +108,9 @@ const NinethMainSection = () => {
                 onChange={(e) => handleChange("type", e.target.value)}
               >
                 <option value="">نوع الخدمه</option>
-                {types.map((item) => (
+                {RESERVATIONS.map((item) => (
                   <option key={item.id} value={item.value}>
-                    {item.name}
+                    {item.value} - {item.price}
                   </option>
                 ))}
               </select>
