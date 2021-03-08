@@ -747,9 +747,9 @@ const NinethMainSection = () => {
               children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("option", {
                 value: "",
                 children: "\u0646\u0648\u0639 \u0627\u0644\u062E\u062F\u0645\u0647"
-              }), RESERVATIONS.map(item => /*#__PURE__*/Object(jsx_runtime_["jsxs"])("option", {
+              }), RESERVATIONS.map(item => /*#__PURE__*/Object(jsx_runtime_["jsx"])("option", {
                 value: item.value,
-                children: [item.value, " - ", item.price]
+                children: item.value
               }, item.id))]
             })
           }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {

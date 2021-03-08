@@ -110,7 +110,7 @@ const NinethMainSection = () => {
                 <option value="">نوع الخدمه</option>
                 {RESERVATIONS.map((item) => (
                   <option key={item.id} value={item.value}>
-                    {item.value} - {item.price}
+                    {item.value}
                   </option>
                 ))}
               </select>
